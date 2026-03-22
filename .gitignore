@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+.venv/
+
+# Local environment/config
+.env
+
+# OS files
+.DS_Store
+
+# Output artifacts
+output/
