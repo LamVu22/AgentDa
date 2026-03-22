@@ -91,7 +91,6 @@ The agents will work through your assignments and print a complete study plan to
 ```
 agenta/
 ├── main.py                  -- run this to generate a study plan
-├── test_courses.py          -- standalone script for testing Canvas API
 ├── .env.example             -- environment variable template
 ├── requirements.txt
 ├── agents/
