@@ -14,13 +14,13 @@ Canvas posts assignments across five or six courses at once. Due dates get burie
 
 AgentA runs a crew of six AI agents in sequence, each with a specific job:
 
-1. **Canvas Fetcher** — connects to the Canvas API and pulls all courses for the current semester, then fetches every upcoming unsubmitted assignment across all of them.
+1. **Canvas Fetcher** — connects to the Canvas API and pulls all courses for the current enrolled semester, then fetches every upcoming unsubmitted assignment across all of them.
 
 2. **Assignment Summarizer** — takes the raw Canvas data and rewrites each assignment in plain English, estimates how long it will take, and flags anything with a vague or missing description.
 
-3. **Priority Ranker** — orders every assignment by a combination of urgency, point value, and estimated effort. You always know what to do first.
+3. **Priority Ranker** — orders every assignment by a combination of urgency, point value, and estimated effort so you always know what to do first.
 
-4. **Conflict Detector** — finds days and weeks where deadlines cluster dangerously and recommends which assignments to start early before the crunch hits.
+4. **Conflict Detector** — finds days and weeks where deadlines cluster and recommends which assignments to start early before the crunch hits.
 
 5. **Study Planner** — uses today's date, the priority ranking, and the conflict report to build a day-by-day study plan that respects your daily hour limit and leaves a buffer before every deadline.
 
