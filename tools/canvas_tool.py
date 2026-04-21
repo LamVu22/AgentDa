@@ -41,12 +41,9 @@ def _strip_html(text: str) -> str:
     return text.strip()
 
 
-def _get_submission_state(course_id: int, assignment_id: int) -> str:
-    url = f"{BASE_URL}/api/v1/courses/{course_id}/assignments/{assignment_id}/submissions/self"
-    resp = requests.get(url, headers=_headers(), timeout=30)
-    if resp.status_code != 200:
-        return "unknown"
-    return resp.json().get("workflow_state", "unknown")
+def _get_submission_state_from_assignment(assignment: dict) -> str:
+    submission = assignment.get("submission") or {}
+    return submission.get("workflow_state", "unknown")
 
 
 # ── Tool 1: Fetch enrolled courses for current term ────────────────────────────
@@ -107,7 +104,10 @@ class FetchAssignmentsTool(BaseTool):
 
         assignments = _get_all_pages(
             f"{BASE_URL}/api/v1/courses/{course_id_int}/assignments",
-            params={"per_page": 100},
+            params={
+                "per_page": 100,
+                "include[]": "submission",
+            },
         )
 
         if not assignments:
@@ -125,7 +125,7 @@ class FetchAssignmentsTool(BaseTool):
         # Filter 2: only unsubmitted
         unsubmitted = [
             a for a in upcoming
-            if _get_submission_state(course_id_int, a["id"])
+            if _get_submission_state_from_assignment(a)
             not in ("submitted", "graded", "pending_review")
         ]
 

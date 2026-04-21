@@ -14,13 +14,13 @@ MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
 canvas_fetcher = Agent(
     role="Canvas Data Fetcher",
     goal=(
-        "Retrieve the student's enrolled courses from Canvas LMS, "
+        "Retrieve the student's enrolled courses from Canvas Learning Management System, "
         "then fetch all upcoming assignments for every course."
     ),
     backstory=(
         "You are a meticulous data retrieval specialist. You interact with "
         "the Canvas LMS API to pull accurate, up-to-date information. "
-        "You never guess or fabricate data — if something isn't returned "
+        "You never guess or fabricate data. If something isn't returned "
         "by the API, you say so clearly."
     ),
     tools=[FetchEnrolledCoursesTool(), FetchAssignmentsTool()],

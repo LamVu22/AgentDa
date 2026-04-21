@@ -1,4 +1,6 @@
 import os
+from datetime import datetime
+from pathlib import Path
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -63,8 +65,15 @@ def run():
 
     result = crew.kickoff()
 
+    output_dir = Path("output")
+    output_dir.mkdir(parents=True, exist_ok=True)
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    output_path = output_dir / f"study_plan_{timestamp}.txt"
+    output_path.write_text(str(result), encoding="utf-8")
+
     print("\n" + "="*60)
-    print("AgentA finished!")
+    print("Finished running!")
+    print(f"You can find your plan at: {output_path}")
     print("="*60)
 
 
