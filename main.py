@@ -67,7 +67,7 @@ def run():
 
     output_dir = Path("output")
     output_dir.mkdir(parents=True, exist_ok=True)
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    timestamp = datetime.now().strftime("%m-%d-%Y")
     output_path = output_dir / f"study_plan_{timestamp}.txt"
     output_path.write_text(str(result), encoding="utf-8")
 
