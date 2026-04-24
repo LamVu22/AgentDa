@@ -30,7 +30,7 @@ AgentA runs a crew of six AI agents in sequence, each with a specific job:
 
 ---
 
-## Requirements
+## What you'll need:
 
 - Python 3.10 or higher
 - An OpenAI API key
@@ -39,7 +39,7 @@ AgentA runs a crew of six AI agents in sequence, each with a specific job:
 
 ---
 
-## Installation
+## How to install??
 
 Clone the repository and set up a virtual environment:
 
@@ -68,7 +68,7 @@ PLANNING_HORIZON_DAYS=14
 MAX_STUDY_HOURS_PER_DAY=4
 ```
 
-### Getting your Canvas token
+### How to get your Canvas access token??
 
 1. Log into Canvas
 2. Click your profile picture, then go to Account, then Settings
