@@ -6,7 +6,9 @@ AgentA is a multi-agent AI system that connects to your Canvas LMS account, read
 
 ## The problem it solves
 
-Canvas posts assignments across five or six courses at once. Due dates get buried. It is easy to forget something exists until the night before it is due. AgentA reads everything for you, filters out what is already submitted or overdue, and tells you exactly what to work on and when.
+Canvas posts assignments across five or six courses at once. Due dates get buried. It is easy to forget something exists until the night before it is due. AgentDa is a agent crew that reads everything for you, filters out what is already submitted or overdue, and tells you exactly what to work on and when. You won't have to multiple tabs to figure out what is due tonight or tomorrow, AgentDa got you. TRY IT OUT! 
+
+p/s: Let me know what feature you want to ask, I'd be happy to do so.
 
 ---
 
